@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 const authController = require("../Controller/auth.controller")
 
+
+
 router.post("/register",authController.Register)
 router.post("/login",authController.Login)
 router.get("/getallusers",authController.getAllUsersController)

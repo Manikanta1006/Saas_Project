@@ -52,10 +52,21 @@ const getallprojects = async () => {
     }
 }
 
+const allprojects = async (req, res) => {
+    try {
+        const project = await ProjectService.usersCount()
+        res.status(200).json(project);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+}
+
+
 module.exports = {
     projectCreationController,
     getProjectByIdController,
     updateProjectController,
     deleteProjectController,
-    getallprojects
+    getallprojects,
+    allprojects
 };

@@ -51,10 +51,23 @@ const getbyidproject = async(id)=>{
         console.log(err,"project getting error by id")
     }
 }
+
+const ProjectCount = async () => {
+    try {
+        const project = await projectmodel.aggregate([
+           { $group:{ _id:null, totalprojects: { $sum: 1 } }}
+        ])
+        return project;
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 module.exports ={
     CreateProject,
     AllProjects,
     DeleteProject,
     UpdateProject,
-    getbyidproject
+    getbyidproject,
+    ProjectCount
 }

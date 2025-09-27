@@ -8,6 +8,7 @@ router.get("/getallprojects",ProjectController.getallprojects)
 router.put("/updateproject/:id",ProjectController.updateProjectController)
 router.put("/deleteproject/:id",ProjectController.deleteProjectController)
 router.get("/projectgetbyid/:id",ProjectController.getProjectByIdController)
+router.get("/allprojectscount",ProjectController.allprojects)
 
 
 module.exports = router

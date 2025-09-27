@@ -44,8 +44,8 @@ const usersCount = async () => {
            { $group:{ _id:null, totalusers: { $sum: 1 } }}
         ])
         return userscount;
-    } catch (error) {
-
+    } catch (err) {
+        console.log(err)
     }
 }
 

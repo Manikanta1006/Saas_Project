@@ -3,6 +3,7 @@ const UserService = require("../Service/User.service");
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
 
+// zc
 const Register = async (req, res) => {
 
     const { UserName, Email, Password } = req.body;
